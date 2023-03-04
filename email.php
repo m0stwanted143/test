@@ -5,32 +5,32 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $message = $_POST['message'];
 
-require "vendor/autoload.php";
+// require "vendor/autoload.php";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-
-
-$contact = new PHPMailer(true);
-
-$contact->isSMTP();
-$contact->SMTPAuth = true;
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\SMTP;
 
 
-$contact->Host = "smtp.gmail.com";
-$contact->SMTPSecure = 'tsl';
-$contact->Port = 587;
+// $contact = new PHPMailer(true);
 
-$contact->Username = "montec.romester@gmail.com";
-$contact->Password = "rafael123";
+// $contact->isSMTP();
+// $contact->SMTPAuth = true;
 
-$contact->setFrom($email, $name);
-$contact->addAddress("montec.romestec@gmail.com", "rafael");
 
-$contact->Subject = $subject;
-$contact->message = $message;
+// $contact->Host = "smtp.gmail.com";
+// $contact->SMTPSecure = 'tsl';
+// $contact->Port = 587;
 
-$contact->send();
+// $contact->Username = "montec.romester@gmail.com";
+// $contact->Password = "rafael123";
+
+// $contact->setFrom($email, $name);
+// $contact->addAddress("montec.romestec@gmail.com", "rafael");
+
+// $contact->Subject = $subject;
+// $contact->message = $message;
+
+// $contact->send();
 
 echo "email sent";
 echo $email, $name,$subject,$message;
