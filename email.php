@@ -27,10 +27,12 @@ $contact->Password = "rafael123";
 $contact->setFrom($email, $name);
 $contact->addAddress("montec.romestec@gmail.com", "rafael");
 
-$contact->Subject = $_POST["subject"];
-$contact->message = $_POST["message"];
+$contact->Subject = $subject;
+$contact->message = $message;
 
 $contact->send();
 
 echo "email sent";
+echo $email, $name,$subject,$message;
+
 ?>
